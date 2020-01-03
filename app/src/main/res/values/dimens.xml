@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="txt_header">20dp</dimen>
+    <dimen name="txt_extra_large_size">24dp</dimen>
+    <dimen name="margin_top_between_views">16dp</dimen>
+    <dimen name="margin_bottom_between_views">16dp</dimen>
+</resources>

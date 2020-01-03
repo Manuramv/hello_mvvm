@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Hello</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_title_fragment">Hello blank fragment</string>
+    <string name="get_ready_to">Get ready to</string>
+    <string name="guess_the_word">Guess the Word!</string>
+    <string name="play">Play</string>
+    <string name="txt_word_is">The Word is</string>
+    <string name="txt_skip">Skip</string>
+    <string name="txt_gotit">Got it</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="game_finished_text">Game Finished</string>
+    <string name="hello_score_fragment">Score FRagment</string>
+    <string name="txt_your_score">Your Score is</string>
 </resources>
