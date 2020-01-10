@@ -71,8 +71,13 @@ class GameFragment : Fragment() {
         })
 
         gameViewModel.eventGameFinish.observe(this, Observer { gameFinish->
-            if(gameFinish)
+            if(gameFinish){
                 onGameFinished()
+                //we need to call this method to prevent calling the eventgamefinish method again and again.
+                //for exmple just put a toast on the onGameFinished() and try to rotate the phone once eventGameFinish occured, because while rotating the phone fragment gets recreate and the value will be recreated by livedata.
+                gameViewModel.onGameFinishComplete()
+            }
+
         })
 
 

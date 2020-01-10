@@ -23,7 +23,6 @@ class GameViewModel : ViewModel(){
         resetList()
         nextWord()
         _score.value =0
-        _eventGameFinish.value = false
     }
 
     companion object{
@@ -78,5 +77,9 @@ class GameViewModel : ViewModel(){
         nextWord()
         _score.value = score.value?.minus(1)
 
+    }
+
+    fun onGameFinishComplete() {
+        _eventGameFinish.value = false;
     }
 }
