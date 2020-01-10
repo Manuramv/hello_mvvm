@@ -18,6 +18,7 @@ import androidx.navigation.findNavController
 import com.example.hello.R
 import com.example.hello.databinding.GameFragmentBinding
 import com.example.hello.title.TitleFragmentDirections
+import kotlinx.android.synthetic.main.game_fragment.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -68,6 +69,10 @@ class GameFragment : Fragment() {
 
         gameViewModel.score.observe(this, Observer { newSocre->
             binding.txtScore.text = newSocre.toString()
+        })
+
+        gameViewModel.countDownTimer.observe(this, Observer { timer->
+            binding.txtGameCountDownTimer.text = timer.toString()
         })
 
         gameViewModel.eventGameFinish.observe(this, Observer { gameFinish->

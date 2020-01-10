@@ -39,6 +39,21 @@ xmlns:tools="http://schemas.android.com/tools">
             app:layout_constraintTop_toBottomOf="@+id/txtWordis"
             app:layout_constraintVertical_chainStyle="packed"/>
 
+
+        <TextView
+            android:id="@+id/txtGameCountDownTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:18"
+            android:layout_marginBottom="@dimen/margin_bottom_between_views"
+
+            app:layout_constraintBottom_toTopOf="@+id/txtScore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            />
+
+
         <TextView
             android:id="@+id/txtScore"
             android:layout_width="wrap_content"
