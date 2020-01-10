@@ -1,6 +1,7 @@
 package com.example.hello.game
 
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
@@ -9,22 +10,33 @@ class GameViewModel : ViewModel(){
 
     private lateinit var wordsList : MutableList<String>
     val word = MutableLiveData<String>()
-    val score = MutableLiveData<Int>()
-    val gameFinish = MutableLiveData<Boolean>()
+    //encapsulating the value score, now the score value can't be set from anywhere outside
+    private val _score = MutableLiveData<Int>()
+    val score : LiveData<Int> get() = _score
+
+    private val _eventGameFinish = MutableLiveData<Boolean>()
+    val eventGameFinish : LiveData<Boolean> get() = _eventGameFinish
+
 
     init {
         Log.i("TAG","Gameviewmodel created::")
         resetList()
         nextWord()
-        score.value =0
-        gameFinish.value = false
+        _score.value =0
+        _eventGameFinish.value = false
+    }
+
+    companion object{
+        val TIME_OVER = 0;
+        val ONE_SECOND = 1000L;
+        val MAX_GAME_TIME = 60000L;
     }
 
     private fun nextWord() {
         if(!wordsList.isEmpty())
             word.value =  wordsList.removeAt(0)
         else{
-           gameFinish.value = true
+            _eventGameFinish.value = true;
         }
     }
 
@@ -58,13 +70,13 @@ class GameViewModel : ViewModel(){
 
     fun gotTheCorrectWord() {
         nextWord()
-        score.value = score.value?.plus(1)
+        _score.value = score.value?.plus(1)
 
     }
 
     fun skippeedWord() {
         nextWord()
-        score.value = score.value?.minus(1)
+        _score.value = score.value?.minus(1)
 
     }
 }

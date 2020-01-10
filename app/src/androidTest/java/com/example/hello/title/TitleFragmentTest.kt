@@ -56,7 +56,7 @@ class TitleFragmentTest {
 
 
         val Gamescenario = launchFragmentInContainer<GameFragment>()
-        onView(withId(R.id.txtview)).check(matches(isDisplayed()))
+        onView(withId(R.id.gameFragment)).check(matches(isDisplayed()))
 
     }
 

@@ -70,7 +70,7 @@ class GameFragment : Fragment() {
             binding.txtScore.text = newSocre.toString()
         })
 
-        gameViewModel.gameFinish.observe(this, Observer { gameFinish->
+        gameViewModel.eventGameFinish.observe(this, Observer { gameFinish->
             if(gameFinish)
                 onGameFinished()
         })
@@ -81,9 +81,10 @@ class GameFragment : Fragment() {
     }
 
     private fun onGameFinished() {
-        view?.findNavController()?.navigate(GameFragmentDirections.actionGameToScore(gameViewModel.score.value!!))
-        //Toast.makeText(context, resources.getString(R.string.game_finished_text),Toast.LENGTH_LONG).show()
+       // view?.findNavController()?.navigate(GameFragmentDirections.actionGameToScore(gameViewModel.score.value!!))
+        Toast.makeText(this.activity, resources.getString(R.string.game_finished_text),Toast.LENGTH_LONG).show()
     }
+
 
 
 }
