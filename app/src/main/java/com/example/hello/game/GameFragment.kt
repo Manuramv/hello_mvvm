@@ -91,8 +91,8 @@ class GameFragment : Fragment() {
     }
 
     private fun onGameFinished() {
-       // view?.findNavController()?.navigate(GameFragmentDirections.actionGameToScore(gameViewModel.score.value!!))
-        Toast.makeText(this.activity, resources.getString(R.string.game_finished_text),Toast.LENGTH_LONG).show()
+        view?.findNavController()?.navigate(GameFragmentDirections.actionGameToScore(gameViewModel.score.value!!))
+       // Toast.makeText(this.activity, resources.getString(R.string.game_finished_text),Toast.LENGTH_LONG).show()
     }
 
 
