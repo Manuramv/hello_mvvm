@@ -15,4 +15,11 @@
     <string name="game_finished_text">Game Finished</string>
     <string name="hello_score_fragment">Score FRagment</string>
     <string name="txt_your_score">Your Score is</string>
+    <string name="score_showing_methods_info">We will show the score in 3 approaches.\n 1, Legacy approach passing the arguments to the fragment and let the fragment set the value directy to the tetview.
+    \n 2, We will use a setter method in Viewmodel and pass the value to that from fragment and observe the value.
+        \n 3, Using the constructor in Viewmodel by using the viewmodel factory.
+    </string>
+    <string name="first_approach">First approach:</string>
+    <string name="second_approach">Second Approach:</string>
+    <string name="third_approach">Third Approach:</string>
 </resources>

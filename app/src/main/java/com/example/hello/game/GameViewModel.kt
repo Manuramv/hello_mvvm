@@ -62,10 +62,6 @@ class GameViewModel : ViewModel(){
             "queen",
             "hospital",
             "basketball",
-            "cat",
-            "change",
-            "snail",
-            "soup",
             "calendar",
             "sad",
             "desk",
@@ -77,9 +73,7 @@ class GameViewModel : ViewModel(){
             "car",
             "crow",
             "trade",
-            "bag",
-            "roll",
-            "bubble"
+            "bag"
         )
         wordsList.shuffle()
     }

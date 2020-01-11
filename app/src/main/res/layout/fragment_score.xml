@@ -4,40 +4,127 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/scoreFragmentRoot"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".score.ScoreFragment"
-    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scoreFragmentRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".score.ScoreFragment">
 
-    <TextView
-        android:id="@+id/txtYourScorelbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_your_score"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <TextView
-        android:id="@+id/txtGameScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_top_between_views"
-        android:textSize="@dimen/txt_header"
-
-        app:layout_constraintTop_toBottomOf="@+id/txtYourScorelbl"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-
-        />
+        <TextView
+            android:id="@+id/txtScoreSettingInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_bottom_between_views"
+            android:text="@string/score_showing_methods_info"
+            android:textColor="@color/colorPrimary"
 
 
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            />
+
+        <TextView
+            android:id="@+id/txtYourScorelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_your_score"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtApproach1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_between_views"
+            android:text="@string/first_approach"
+            android:textSize="@dimen/txt_header"
+
+            app:layout_constraintEnd_toStartOf="@id/txtGameScore"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtYourScorelbl" />
+
+        <TextView
+            android:id="@+id/txtGameScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_between_views"
+            android:paddingLeft="@dimen/margin_bottom_between_views"
+            android:text="maaaa"
+            android:textSize="@dimen/txt_header"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtApproach1"
+            app:layout_constraintTop_toBottomOf="@+id/txtYourScorelbl" />
+
+        <!--second approach ext begins-->
+        <TextView
+            android:id="@+id/txtApproach2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_between_views"
+            android:text="@string/second_approach"
+            android:textSize="@dimen/txt_header"
+
+            app:layout_constraintEnd_toStartOf="@+id/txtGameScore2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtApproach1"
+
+            />
+
+        <TextView
+            android:id="@+id/txtGameScore2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_between_views"
+            android:paddingLeft="@dimen/margin_bottom_between_views"
+            android:text="maaaa"
+            android:textSize="@dimen/txt_header"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtApproach2"
+            app:layout_constraintTop_toBottomOf="@+id/txtGameScore"
+
+            />
+        <!--second approach ext ends-->
+
+        <!--third approach ext begins-->
+        <TextView
+            android:id="@+id/txtApproach3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_between_views"
+            android:text="@string/third_approach"
+            android:textSize="@dimen/txt_header"
+
+            app:layout_constraintEnd_toStartOf="@id/txtGameScore3"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtApproach2" />
+
+        <TextView
+            android:id="@+id/txtGameScore3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_between_views"
+            android:paddingLeft="@dimen/margin_bottom_between_views"
+            android:text="maaaa"
+            android:textSize="@dimen/txt_header"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtApproach3"
+            app:layout_constraintTop_toBottomOf="@+id/txtGameScore2"
+
+            />
+        <!--third approach ext ends-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
